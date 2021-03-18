@@ -7,7 +7,7 @@ phases:
   pre_build:
     commands:
       - apt-get install -y python3-venv
-      - python3.6 -m venv test_venv
+      - python3 -m venv test_venv
       - . test_venv/bin/activate
       - pip install --upgrade pip
       - pip install .
@@ -16,7 +16,7 @@ phases:
       
   build:
     commands:
-      - python3.6 src/app.py 
+      - python3 src/app.py 
   post_build:
     commands:
       - echo Build completed on `date`
