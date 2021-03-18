@@ -5,10 +5,10 @@ import requests
 
 
 def check_ip():
-    r = requests.get("https://api.myip.com/")
+    r = requests.get("http://checkip.amazonaws.com/")
     print (r.status_code)
     if r:
-        current_ip = r.json()['ip']
+        current_ip = r
 
         message = f"{current_ip}"
         return current_ip
