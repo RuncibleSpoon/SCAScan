@@ -12,6 +12,11 @@ phases:
       - pip install --upgrade pip
       - pip install -r src/requirements.txt
       - rm -rf dspt
+      - apt-get update
+      - apt-get install -y openjdk-8-jdk
+      - apt-get install -y ant 
+      - apt-get clean
+
       
   build:
     commands:
