@@ -17,6 +17,6 @@ phases:
   build:
     commands:
       - python3.6 src/app.py 
-          post_build:
+  post_build:
     commands:
       - echo Build completed on `date`
