@@ -8,7 +8,7 @@ def check_ip():
     r = requests.get("http://checkip.amazonaws.com/")
     print (r.status_code)
     if r:
-        current_ip = r
+        current_ip = r.text
 
         message = f"{current_ip}"
         return current_ip
