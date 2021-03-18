@@ -6,7 +6,7 @@ phases:
       python: 3.8
   pre_build:
     commands:
-      - apt-get install -y python3-venv
+      - pip install virtualenv
       - python3 -m venv test_venv
       - . test_venv/bin/activate
       - pip install --upgrade pip
