@@ -13,7 +13,7 @@ def check_ip():
         message = f"{current_ip}"
         return current_ip
     else:
-    	return "failed"
+    	return "failed duh"
 
 if __name__ == '__main__':
     current_ip = check_ip()
