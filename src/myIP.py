@@ -1,23 +1,19 @@
-import pickle
-import os.path
 import urllib3
-
-
 
 def check_ip():
 
-http = urllib3.PoolManager()
+    http = urllib3.PoolManager()
 
-url = 'http://checkip.amazonaws.com/'
+    url = 'http://checkip.amazonaws.com/'
 
-r = http.request('GET', url)
+    r = http.request('GET', url)
 
-  if r:
-    current_ip = r.text
-    message = f"{current_ip}"
-    return current_ip
-  else:
-    return "failed duh"
+    if r:
+      current_ip = r.data.decode('utf-8')
+      message = f"Your IP is {current_ip}"
+      return message
+    else:
+        return "failed duh"
 
 if __name__ == '__main__':
   current_ip = check_ip()
